@@ -2,9 +2,8 @@ version: '3'
 services:
   decidim:
     image: decidim/decidim:latest-dev
-    entrypoint: []
-    command: decidim
     working_dir: "/code"
+    command: bash -c "rm -f /code/development_app/tmp/pids/server.pid && cd development_app && bin/rails s"
     volumes:
       - .:/code
       - bundle:/usr/local/bundle
@@ -15,6 +14,8 @@ services:
     links:
       - pg
       - redis
+    ports:
+      - 3000:3000
   pg:
     image: postgres
     volumes:

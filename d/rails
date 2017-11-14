@@ -1,0 +1,5 @@
+#!/bin/bash
+
+args="$@"
+
+docker-compose run --rm decidim bash -c "cd development_app && bin/rails $args"
