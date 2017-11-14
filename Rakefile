@@ -3,7 +3,6 @@
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 require "generators/decidim/app_generator"
-require "generators/decidim/docker_generator"
 
 DECIDIM_GEMS = %w(core system admin api participatory_processes assemblies pages meetings proposals comments accountability budgets surveys verifications dev).freeze
 
@@ -94,17 +93,6 @@ task :development_app do
   Bundler.with_clean_env do
     Decidim::Generators::AppGenerator.start(
       ["development_app", "--path", "..", "--recreate_db", "--seed_db", "--demo"]
-    )
-  end
-end
-
-desc "Generates a development app based on Docker."
-task :docker_development_app do
-  docker_app_path = __dir__ + "/docker_development_app"
-
-  Bundler.with_clean_env do
-    Decidim::Generators::DockerGenerator.start(
-      ["docker_development_app", "--docker_app_path", docker_app_path]
     )
   end
 end
