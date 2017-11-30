@@ -95,8 +95,6 @@ After you create a development app (`bundle exec rake development_app`):
 
 Optionally, you can log in as: user@example.org | decidim123456
 
-Also, if you want to verify yourself against the default authorization handler use a document number ended with "X".
-
 #### Browse Admin Interface
 
 After you create a development app (`bundle exec rake development_app`):
