@@ -37,25 +37,7 @@
     end
     ```
 
-1. Remove `bin/test` and add an executable `bin/rails` with this content:
-
-    ```ruby
-    #!/usr/bin/env ruby
-    # frozen_string_literal: true
-
-    # This command will automatically be run when you run "rails" with Rails gems
-    # installed from the root of your application.
-
-    ENGINE_ROOT = File.expand_path("..", __dir__)
-    ENGINE_PATH = File.expand_path("../lib/decidim/<engine_name>/engine", __dir__)
-
-    # Set up gems listed in the Gemfile.
-    ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile", __dir__)
-    require "bundler/setup"
-
-    require "rails/all"
-    require "rails/engine/commands"
-    ```
+1. Remove `bin/test`.
 
 1. Replace `lib/decidim/<engine_name>.rb` with this:
 
