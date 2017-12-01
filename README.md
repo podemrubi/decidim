@@ -85,24 +85,15 @@ You have several rake tasks available:
 * `bundle exec rake test_all`: Runs the tests of every engine using the dummy
   application
 
-#### Browse Decidim
+After you create a development app (`bundle exec rake development_app`), you
+have to switch to it and boot the rails server with `cd development_app &&
+bundle exec rails s`.
 
-After you create a development app (`bundle exec rake development_app`):
+After that, you can:
 
-* `cd development_app`
-* `bundle exec rails s`
-* Go to 'http://localhost:3000'
-
-Optionally, you can log in as: user@example.org | decidim123456
-
-#### Browse Admin Interface
-
-After you create a development app (`bundle exec rake development_app`):
-
-* `cd development_app`
-* `bundle exec rails s`
-* Go to 'http://localhost:3000/admin'
-* Login data: admin@example.org | decidim123456
+* Browse the main interface at `http://localhost:3000`, and log in as: user@example.org | decidim123456
+* Browse the admin interface at `http://localhost:3000/admin`, and log in as: admin@example.org | decidim123456
+* Browse the system interface at `http://localhost:3000/system`, and log in as: system@example.org | decidim123456
 
 ## Officially supported libraries
 
