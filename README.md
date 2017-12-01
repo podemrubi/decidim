@@ -60,6 +60,8 @@ Decidim is already translated on multiple languages (English, Spanish, Catalan, 
 
 ### As a Developer
 
+#### Without docker
+
 In order to develop on decidim, you'll need:
 
 * **Git** 2.15+
@@ -94,6 +96,18 @@ After that, you can:
 * Browse the main interface at `http://localhost:3000`, and log in as: user@example.org | decidim123456
 * Browse the admin interface at `http://localhost:3000/admin`, and log in as: admin@example.org | decidim123456
 * Browse the system interface at `http://localhost:3000/system`, and log in as: system@example.org | decidim123456
+
+#### With docker (experimental)
+
+You can also use [docker] && [docker-compose] to develop decidim. You'll need to
+install those but in exchange you don't need to install any other dependency in
+your computer, not even Ruby!
+
+To use docker, change any instruction in this README or any other place in the
+docs to use its equivalent docker binstub. So for example, instead of running
+`bundle exec rake development_app`, you would run `d/bundle exec rake
+development_app`, or instead of `bundle install`, you would run `d/bundle
+install`.
 
 ## Officially supported libraries
 
@@ -148,3 +162,6 @@ Since Decidim is a ruby gem, you can check out the [dependent repositories](http
 * [Decidim Mataró](https://www.decidimmataro.cat) - [View code](https://github.com/AjuntamentDeMataro/decidim-mataro)
 * [Commission Nationale du Débat Public (France)](https://cndp.opensourcepolitics.eu/)
 * [MetaDecidim](https://meta.decidim.barcelona/) - [View Code](https://github.com/decidim/metadecidim)
+
+[docker]: https://docs.docker.com/engine/installation/
+[docker-compose]: https://docs.docker.com/compose/install/
