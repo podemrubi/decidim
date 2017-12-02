@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 describe "Application generation" do
-  let(:status) { Bundler.clean_system(command, out: File::NULL) }
+  let(:status) do
+    Bundler.with_original_env do
+      system(command, out: File::NULL)
+    end
+  end
 
   let(:test_app) { "spec/generator_test_app" }
 
@@ -15,11 +19,15 @@ describe "Application generation" do
 
   # rubocop:disable RSpec/BeforeAfterAll
   before(:all) do
-    system("bundle exec rake install_all", out: File::NULL)
+    Bundler.with_original_env do
+      system("bundle exec rake install_all", out: File::NULL)
+    end
   end
 
   after(:all) do
-    system("bundle exec rake uninstall_all", out: File::NULL)
+    Bundler.with_original_env do
+      system("bundle exec rake uninstall_all", out: File::NULL)
+    end
   end
   # rubocop:enable RSpec/BeforeAfterAll
 
