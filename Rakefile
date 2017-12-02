@@ -48,7 +48,7 @@ end
 
 desc "Installs all gems locally."
 task :install_all do
-  RakeUtils.run_all "rake install:local", out: File::NULL
+  RakeUtils.run_all "rake install", out: File::NULL
 end
 
 desc "Uninstalls all gems locally."
