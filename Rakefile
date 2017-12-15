@@ -59,12 +59,12 @@ task :test_app do
 
   Dir.chdir(__dir__) do
     sh "rm -fR #{dummy_app_path}", verbose: false
-  end
 
-  Bundler.with_clean_env do
-    Decidim::Generators::AppGenerator.start(
-      [dummy_app_path, "--path", "../..", "--recreate_db", "--demo"]
-    )
+    Bundler.with_clean_env do
+      Decidim::Generators::AppGenerator.start(
+        [dummy_app_path, "--path", "../..", "--recreate_db", "--demo"]
+      )
+    end
   end
 end
 
