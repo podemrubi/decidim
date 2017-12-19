@@ -6,7 +6,7 @@ describe "Admin manages assembly attachments", type: :feature do
   include_context "when administrating an assembly"
 
   let(:attached_to) { assembly }
-  let(:attachment_collection) { create(:attachment_collection, participatory_space: assembly) }
+  let(:attachment_collection) { create(:attachment_collection, collection_for: assembly) }
 
   before do
     switch_to_host(organization.host)
