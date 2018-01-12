@@ -204,6 +204,12 @@ module Decidim
         end
       end
 
+      initializer "decidim.content_parsers" do |_app|
+        Decidim.configure do |config|
+          config.content_parsers << "Decidim::Parsers::Content::MentionParser"
+        end
+      end
+
       initializer "paper_trail" do
         PaperTrail.config.track_associations = false
       end

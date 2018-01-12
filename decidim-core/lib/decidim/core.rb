@@ -21,6 +21,8 @@ module Decidim
   autoload :Participable, "decidim/participable"
   autoload :Publicable, "decidim/publicable"
   autoload :Scopable, "decidim/scopable"
+  autoload :Parseable, "decidim/parseable"
+  autoload :Parsers, "decidim/parsers"
   autoload :Features, "decidim/features"
   autoload :HasAttachments, "decidim/has_attachments"
   autoload :FeatureValidator, "decidim/feature_validator"
@@ -90,6 +92,13 @@ module Decidim
   # Exposes a configuration option: The application available locales.
   config_accessor :available_locales do
     %w(en ca es eu fi fr gl it nl pt pr-BR ru sv uk)
+  end
+
+  # Exposes a configuration option: an Array of ContentParser classes
+  # that will be automatically included to the base `Decidim::ContentParsers::BaseParser`
+  # class.
+  config_accessor :content_parsers do
+    []
   end
 
   # Exposes a configuration option: The application default locale.
