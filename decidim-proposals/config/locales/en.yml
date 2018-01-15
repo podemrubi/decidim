@@ -43,6 +43,7 @@ en:
       actions:
         answer: Answer
         new: New
+        private_notes: Private notes
         title: Actions
       admin:
         actions:
@@ -75,6 +76,17 @@ en:
           new:
             create: Create
             title: Create proposal
+        proposal_notes:
+          form:
+            comment: Comment
+            submit: Submit
+          leave_your_comment: Leave your comment
+          title: Private notes
+        shared:
+          info_proposal:
+            body: Body
+            created_at: Date creation
+            proposal_votes_count: Nº votes
       answers:
         accepted: Accepted
         evaluating: Evaluating
@@ -98,6 +110,7 @@ en:
             comments: Comments
             created_at: Created at
             id: ID
+            notes: Notes
             official_proposal: Official proposal
             scope: Scope
             state: State

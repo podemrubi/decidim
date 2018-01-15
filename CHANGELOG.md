@@ -13,6 +13,7 @@ you need to change the following line in `config/environments/production.rb`:
 ```
 
 **Added**:
+- **decidim-proposals**: Add private notes by admins to proposal [\2490](https://github.com/decidim/decidim/pull/2490)
 - **decidim-verifications**: Added action authorizers for authorization handlers. [\#2438](https://github.com/decidim/decidim/pull/2438)
 - **decidim-accountability**: Add feature to link projects with results [\#2467](https://github.com/decidim/decidim/pull/2467)
 - **decidim-proposals**: Improve proposals admin panel usability (sorting). [\#2419](https://github.com/decidim/decidim/pull/2419)
